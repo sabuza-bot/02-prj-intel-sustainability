@@ -1,1 +1,83 @@
 /* Add your CSS here */
+
+/* Header banner with a blue gradient */
+header {
+  /* Gradient background for the banner */
+  background: linear-gradient(135deg, #0b63b6, #1f8ad8);
+  color: white; /* Keep text readable on blue */
+  text-align: center; /* Center everything */
+  padding: 24px 16px; /* More compact spacing */
+}
+
+/* Limit the width so text is easy to read */
+header div {
+  max-width: 760px; /* Shorter lines = easier reading */
+  margin: 0 auto; /* Center the content */
+}
+
+/* Smaller logo for a compact header */
+header img {
+  width: 120px; /* Compact logo size */
+  height: auto; /* Keep logo proportions */
+  margin-bottom: 12px; /* Space below logo */
+}
+
+/* Slightly smaller title for compact layout */
+header h1 {
+  font-size: 2rem; /* Clear but compact */
+  margin: 0 0 10px; /* Space below title */
+}
+
+/* Readable paragraph with comfortable spacing */
+header p {
+  font-size: 1rem; /* Standard readable size */
+  line-height: 1.5; /* Comfortable line spacing */
+  margin: 0; /* Remove extra space */
+}
+
+/* Timeline container */
+.timeline {
+  /* Put cards in a row */
+  display: flex;
+  gap: 16px; /* Space between cards */
+  overflow-x: auto; /* Horizontal scroll */
+  padding: 16px; /* Space around the cards */
+  /* Hide the scrollbar but keep scrolling */
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Old Edge */
+}
+
+/* Hide scrollbar in Chrome/Safari */
+.timeline::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each timeline card */
+.card {
+  /* Show 3 cards at a time */
+  flex: 0 0 33.333%;
+  box-sizing: border-box;
+
+  /* Simple card styling */
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+
+  /* Hide each card paragraph by default */
+  .card p {
+    opacity: 0; /* Make the text invisible */
+    transition: opacity 0.2s ease; /* Smooth fade in/out */
+  }
+
+  /* Show the paragraph when the card is hovered */
+  .card:hover p {
+    opacity: 1; /* Make the text visible */
+  }
+
+  /* Show the paragraph when the card is focused (keyboard users) */
+  .card:focus-within p {
+    opacity: 1; /* Make the text visible */
+  }
+}
