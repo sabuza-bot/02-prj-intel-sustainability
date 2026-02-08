@@ -88,6 +88,11 @@ header p {
   overflow: hidden;
 }
 
+/* Year text color inside each card */
+.card h2 {
+  color: #0b3d91; /* Deep blue for the year */
+}
+
 /* Image space inside each card */
 .card-image {
   width: 70%; /* Smaller square to leave clear space below */
